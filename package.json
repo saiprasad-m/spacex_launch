@@ -1,0 +1,21 @@
+{
+  "name": "spacex_launch",
+  "version": "1.0.0",
+  "description": "SpaceX App using GraphQL, Apollo, React",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Sai Prasad (Brad)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
