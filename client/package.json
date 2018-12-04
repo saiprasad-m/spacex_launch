@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build ../public || move build ..\\public",
+    "build": "react-scripts build && mv build ../public || move build\\*.* ..\\public\\ && move build\\static ..\\public\\static",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
