@@ -47,9 +47,10 @@ export class Launch extends Component {
                         </li>
                         <li className="list-group-item">
                             Launch Success: <span className={classNames({
-                                'text-success' : launch_success,
-                                'text-danger' : !launch_success
-                            })}>{ launch_success ? 'Yes' : 'No'}</span>
+                                'text-success': launch_success,
+                                'text-danger': !launch_success && launch_success !== null,
+                                'text-warning': launch_success === null && !launch_success
+                            })}>{ ( launch_success !==null && launch_success ) ? 'Yes' : ( launch_success ===null && !launch_success ) ? 'TBD' : 'No'}</span>
                         </li>
 
                     </ul>

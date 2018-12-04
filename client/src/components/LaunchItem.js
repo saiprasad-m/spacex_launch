@@ -17,8 +17,9 @@ export default function LaunchItem({
          <div className="row">
             <div className="col-md-9">
             <h5>Mission: <span className={classNames({
-                'text-success' : launch_success,
-                'text-danger': !launch_success
+                'text-success': launch_success,
+                'text-danger': !launch_success && launch_success !== null,
+                'text-warning': launch_success === null && !launch_success
             })}>{mission_name}</span></h5>
             <p> Date: <Moment format="YYYY-MM-DD HH:mm">{launch_date_local}</Moment></p>
             </div>
