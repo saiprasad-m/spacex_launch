@@ -13,7 +13,7 @@ export default function LaunchItem({
 
   return (
   
-        <div className="card card-body mb-1">
+        <div className="card card-body mb-1 mx-1">
          <div className="row">
             <div className="col-md-9">
             <h5>Mission: <span className={classNames({
