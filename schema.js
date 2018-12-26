@@ -42,6 +42,17 @@ const RootQuery = new GraphQLObjectType({
                 .then( res => res.data);
             }
         },
+        partLaunches: {
+            type : new GraphQLList(LaunchType), 
+            args: {
+                offset: {type: GraphQLInt},
+                limit: {type: GraphQLInt}
+            },
+            resolve(parent, args) {
+                return axios.get(`https://api.spacexdata.com/v3/launches?limit=${args.limit}&offset=${args.offset}`)
+                .then( res => res.data);
+            }
+        },        
         launch: {
             type: LaunchType,
             args: {
