@@ -83,7 +83,6 @@ export class Launches extends Component {
           ({ loading, error, data, subscribeToMore }) => {
             if(loading) return <h5>Loading ...</h5>
             if(error) console.log(error)
-            console.log('LAUNCHES', data)
             totalCount = data.launches.length;
             return null;
           }
@@ -96,10 +95,7 @@ export class Launches extends Component {
             if(error) console.log(error)
             const linksToRender = this._getLinksToRender(data)
             const isNewPage = this.props.location.pathname.includes('launches')
-            const pageIndex = this.props.match.params.page
-              ? (this.props.match.params.page - 1) * LINKS_PER_PAGE
-              : 0
-
+  
             return <Fragment>
               {
                 linksToRender.map(launch => (
@@ -107,7 +103,7 @@ export class Launches extends Component {
                 ))
               }
               {isNewPage && (
-              <div className="flex ml4 mv3 gray">
+              <div className="flex ml2 mv1 gray">
                 <div className="pointer mr2" onClick={this._previousPage}>
                   Previous
                 </div>
