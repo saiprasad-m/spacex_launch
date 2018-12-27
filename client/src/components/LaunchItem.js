@@ -16,11 +16,11 @@ export default function LaunchItem({
         <div className="card card-body mb-1 mx-1">
          <div className="row">
             <div className="col-md-9">
-            <h5>Mission: <span className={classNames({
+            <h6>Mission: <span className={classNames({
                 'text-success': launch_success,
                 'text-danger': !launch_success && launch_success !== null,
                 'text-warning': launch_success === null && !launch_success
-            })}>{mission_name}</span></h5>
+            })}>{mission_name}</span></h6>
             <p> Date: <Moment format="YYYY-MM-DD HH:mm">{launch_date_local}</Moment></p>
             </div>
             <div className="col-md-3">
