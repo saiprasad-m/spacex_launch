@@ -15,6 +15,8 @@ app.use('/graphql', graphqlHTTP({
 app.use(express.static('public'));
 
 app.get('*', (req, res) => {
+    console.log("intercepted the resolve event")
+    console.log(path.resolve(__dirname,'public', 'build', 'index.html'))
     res.sendFile(path.resolve(__dirname,'public', 'build', 'index.html'))
 })
 
